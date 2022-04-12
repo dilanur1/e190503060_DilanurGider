@@ -1,65 +1,75 @@
 public class Produkt {
-    int pid;
-    double preis;
-    String kategorie;
-    int garantieZeit;
-    String modell;
-    boolean lagerbestand;
-    double abmessung;
+    private int pid;
+    private double preis;
+    private String kategorie;
+    private int garantieZeit;
+    private String modell;
+    private boolean lagerbestand;
+    private double abmessung;
 
     public void setKategorie(String kategorie) {
         this.kategorie = kategorie;
     }
-
-    public int getGarantieZeit() {
-        return garantieZeit;
-    }
-
-    public boolean isLagerbestand() {
-        return lagerbestand;
-    }
-
-    public String getModell() {
-        return modell;
-    }
-
-    public int getPid() {
-        return pid;
-    }
-
-    public double getPreis() {
-        return preis;
-    }
-
     public String getKategorie() {
         return kategorie;
-    }
-
-    public void setAbmessung(double abmessung) {
-        this.abmessung = abmessung;
-    }
-
-    public void setLagerbestand(boolean lagerbestand) {
-        this.lagerbestand = lagerbestand;
     }
 
     public void setGarantieZeit(int garantieZeit) {
         this.garantieZeit = garantieZeit;
     }
+    public int getGarantieZeit() {
+        return garantieZeit;
+    }
+
+    public void setLagerbestand(boolean lagerbestand) {
+        this.lagerbestand = lagerbestand;
+    }
+    public boolean isLagerbestand() {
+        return lagerbestand;
+    }
 
     public void setModell(String modell) {
         this.modell = modell;
     }
-
-    public void setPreis(double preis) {
-        this.preis = preis;
+    public String getModell() {
+        return modell;
     }
 
     public void setPid(int pid) {
         this.pid = pid;
     }
+    public int getPid() {
+        return pid;
+    }
 
+    public void setPreis(double preis) {
+        this.preis = preis;
+    }
+    public double getPreis() {
+        return preis;
+    }
+
+    public void setAbmessung(double abmessung) {
+        this.abmessung = abmessung;
+    }
     public double getAbmessung() {
         return abmessung;
     }
+
+    public void service(Date datum){
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

@@ -1,11 +1,11 @@
 public class Person {
-    String idNummer;
-    String name;
-    String nachname;
-    Date geburtsdatum;
-    String geschlecht;
-    Adresse adresse;
-    String telnummer;
+    private String idNummer;
+    private String name;
+    private String nachname;
+    private Date geburtsdatum;
+    private String geschlecht;
+    private Adresse adresse;
+    private String telnummer;
 
     public Adresse getAdresse() {
         return adresse;

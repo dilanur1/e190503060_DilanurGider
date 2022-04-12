@@ -1,9 +1,13 @@
 public class Zahlungsinfo {
-    int id;
-    String typ;
-    Date datum;
-    double betrag;
-    Kunde zahlenderKunde=new Kunde();
+    private int id;
+    private String typ;
+    private Date datum;
+    private double betrag;
+    private Kunde zahlenderKunde=new Kunde();
+
+    public Zahlungsinfo(Kunde zahlenderKunde) {
+        this.zahlenderKunde = zahlenderKunde;
+    }
 
     public void setBetrag(double betrag) {
         this.betrag = betrag;

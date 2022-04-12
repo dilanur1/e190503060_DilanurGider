@@ -1,8 +1,9 @@
 public class Kunde extends Person{
-    int kundenid;
-    ArrayList<Personal> betreuendePersonal=new ArrayList();
-    Zahlungsinfo z =new Zahlungsinfo();
-    ArrayList<Produkt> einkaufteProdukt=new ArrayList();
+    private int kundenid;
+    private ArrayList<Personal> betreuendePersonal=new ArrayList();
+    private Zahlungsinfo z =new Zahlungsinfo();
+    private ArrayList<Produkt> einkaufteProdukt=new ArrayList();
+
 
     public void setBetreuendePersonal(ArrayList<Personal> betreuendePersonal) {
         this.betreuendePersonal = betreuendePersonal;
@@ -36,6 +37,13 @@ public class Kunde extends Person{
     public Zahlungsinfo getZ() {
         return z;
     }
+
+    public void einkaufen(int personalnummer, int pid, int kundenid){}
+
+    public void zurueckgeben(int personalnummer, int pid, int kundenid){}
+
+    public void bezahlen(int pid, int kundenid){}
+
 
 }
 

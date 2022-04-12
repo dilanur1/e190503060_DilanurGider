@@ -1,9 +1,9 @@
 public class Adresse {
-    int id;
-    String strasse;
-    String stadt;
-    int hausnummer;
-    int plz;
+    private int id;
+    private String strasse;
+    private String stadt;
+    private int hausnummer;
+    private int plz;
 
     public void setHausnummer(int hausnummer) {
         this.hausnummer = hausnummer;

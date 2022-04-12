@@ -1,8 +1,8 @@
 public class Personal extends Person{
-    int personalnummer;
-    String benutzername;
-    String passwort;
-    ArrayList<Kunde> betreuteKunde;
+    private int personalnummer;
+    private String benutzername;
+    private String passwort;
+    private ArrayList<Kunde> betreuteKunde;
 
     public void setBenutzername(String benutzername) {
         this.benutzername = benutzername;
@@ -35,5 +35,33 @@ public class Personal extends Person{
     public void setPersonalnummer(int personalnummer) {
         this.personalnummer = personalnummer;
     }
+
+    public void addProdukt(int pid){}
+
+    public void aktualisiereProdukt(int pid){}
+
+    public void löscheProdukt(int pid){}
+
+    public void sucheProdukt(int personalnummer){}
+    public void sucheProdukt(String modell){}
+
+
+    public void addPersonal(int personalnummer){}
+
+    public void aktualisierePersonal(int personalnummer){}
+
+    public void löschePersonal(int personalnummer){}
+
+
+    public void addKunde(int kundenid){}
+
+    public void aktualisiereKunde(int kundenid){}
+
+    public void löscheKunde(int kundenid){}
+
+    public void login(String benutzername, String passwort){}
+    public void logout(){}
+
+    public void verkaufen(int personalnummer, int pid, int kundenid){}
 
 }
