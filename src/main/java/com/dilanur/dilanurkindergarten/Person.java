@@ -1,3 +1,7 @@
+package com.dilanur.dilanurkindergarten;
+
+import java.util.Date;
+
 public class Person {
     private String idNummer;
     private String name;

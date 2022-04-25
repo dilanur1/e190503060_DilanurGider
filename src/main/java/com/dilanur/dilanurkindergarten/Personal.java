@@ -1,3 +1,6 @@
+package com.dilanur.dilanurkindergarten;
+import java.util.ArrayList;
+import java.util.Date;
 public class Personal extends Person{
     private int personalnummer;
     private String benutzername;

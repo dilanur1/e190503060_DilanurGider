@@ -1,3 +1,5 @@
+package com.dilanur.dilanurkindergarten;
+
 public class Adresse {
     private int id;
     private String strasse;

@@ -1,3 +1,7 @@
+package com.dilanur.dilanurkindergarten;
+import java.util.ArrayList;
+
+import java.util.Date;
 public class Kunde extends Person{
     private int kundenid;
     private ArrayList<Personal> betreuendePersonal=new ArrayList();

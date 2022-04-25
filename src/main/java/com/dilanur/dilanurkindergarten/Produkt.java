@@ -1,3 +1,6 @@
+package com.dilanur.dilanurkindergarten;
+
+import java.util.Date;
 public class Produkt {
     private int pid;
     private double preis;

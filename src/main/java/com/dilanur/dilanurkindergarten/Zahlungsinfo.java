@@ -1,3 +1,7 @@
+package com.dilanur.dilanurkindergarten;
+
+import java.util.Date;
+
 public class Zahlungsinfo {
     private int id;
     private String typ;
