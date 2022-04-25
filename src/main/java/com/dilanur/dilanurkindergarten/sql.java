@@ -27,14 +27,16 @@ public class sql {
 
     }
     public void validateLogin(){
-        String url = "jdbc:sqlite:C:\\Users\\Eylül\\IdeaProjects\\dilanurkindergarten\\sqlite-tools-win32-x86-3380200\\haushaltkaufer.db";
-        conn = DriverManager.getConnection(url);
 
-        System.out.println("Connection to SQLite has been established.");
-        Statement stmt = conn.createStatement();
-        String verifyLogin="SELECT count(1) FROM users WHERE username = '" + benutzername.getText() + "' AND passwort'" + passwort.getText() +" '";
+
+        
+
         try {
-            Statement statement=connectDb.createStatement();
+
+            String url = "jdbc:sqlite:C:\\Users\\Eylül\\IdeaProjects\\dilanurkindergarten\\sqlite-tools-win32-x86-3380200\\haushaltkaufer.db";
+            conn = DriverManager.getConnection(url);
+            Statement statement=conn.createStatement();
+            String verifyLogin="SELECT count(1) FROM users WHERE username = '" + benutzername.getText() + "' AND passwort'" + passwort.getText() +" '";
             ResultSet queryResult =statement.executeQuery(verifyLogin);
 
             while(queryResult.next()){
