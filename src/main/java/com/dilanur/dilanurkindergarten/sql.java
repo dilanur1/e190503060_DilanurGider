@@ -7,52 +7,48 @@ import java.util.Set;
 
 public class sql {
     public  static Connection conn = null;
-    public void connect() {
+
+    public Connection getConnection() {
 
         try {
             // db parameters
-            String url = "jdbc:sqlite:C:\\Users\\Eylül\\IdeaProjects\\dilanurkindergarten\\sqlite-tools-win32-x86-3380200\\haushaltkaufer.db";
+            String url = "jdbc:sqlite:C:\\Users\\Eylül\\IdeaProjects\\dilanurkindergarten\\sqlite-tools-win32-x86-3380200\\bilgiler.db";
             // create a connection to the database
             conn = DriverManager.getConnection(url);
 
             System.out.println("Connection to SQLite has been established.");
-            Statement stmt = conn.createStatement();
-            ResultSet res = stmt.executeQuery("SELECT * FROM users");
-            if(res.next()){
-                System.out.println("username: "+res.getString("username")+" Pass: "+res.getString("passwort"));
-            }
+
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
-
+        return conn;
     }
-    public void validateLogin(){
+    public boolean validateLogin(String username,String password) {
 
 
-        
+        Connection connectDb = this.getConnection();
+
+        String verifyLogin = "SELECT count(1) FROM employee WHERE username =  '" + username + "' AND pass = '" + password + "'" ;
 
         try {
+            Statement statement = connectDb.createStatement();
+            ResultSet queryResult = statement.executeQuery(verifyLogin);
 
-            String url = "jdbc:sqlite:C:\\Users\\Eylül\\IdeaProjects\\dilanurkindergarten\\sqlite-tools-win32-x86-3380200\\haushaltkaufer.db";
-            conn = DriverManager.getConnection(url);
-            Statement statement=conn.createStatement();
-            String verifyLogin="SELECT count(1) FROM users WHERE username = '" + benutzername.getText() + "' AND passwort'" + passwort.getText() +" '";
-            ResultSet queryResult =statement.executeQuery(verifyLogin);
-
-            while(queryResult.next()){
-                if(queryResult.getInt( 1)==1){
-                    Main m=new Main();
-                    m.changeScene("homepage.fxml");
-
-                }else{
-                    label.setText("Falsch Passwort. Versuchen Sie wieder.!!!");
+            while(queryResult.next()) {
+                if(queryResult.getInt(1)==1) {
+                    return true;
+                }else {
+                    return false;
                 }
             }
-        }catch (Exception a){
-            a.printStackTrace();
-            a.getCause();
 
+        }catch(Exception e) {
+            e.printStackTrace();
+            e.getCause();
         }
+        return false;
+
+
     }
 }
 

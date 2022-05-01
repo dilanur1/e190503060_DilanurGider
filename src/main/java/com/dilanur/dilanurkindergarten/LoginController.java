@@ -1,3 +1,4 @@
+package com.dilanur.dilanurkindergarten;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -37,28 +38,20 @@ public class LoginController {
 
 
     }
-    public void validateLogin(){
-        DatabaseConnection connectNow=new DatabaseConnection();
-        Connection connectDb=connectNow.getConnection();
-        String verifyLogin="SELECT count(1) FROM users WHERE username = '" + benutzername.getText() + "' AND passwort'" + passwort.getText() +" '";
-        try {
-            Statement statement=connectDb.createStatement();
-            ResultSet queryResult =statement.executeQuery(verifyLogin);
+    public void validateLogin() throws IOException {
 
-            while(queryResult.next()){
-                if(queryResult.getInt( 1)==1){
-                    Main m=new Main();
-                    m.changeScene("homepage.fxml");
+        DatabaseConnection connectNow = new DatabaseConnection();
+        Connection connectDb = connectNow.getConnection();
 
-                }else{
-                    label.setText("Falsch Passwort. Versuchen Sie wieder.!!!");
-                }
-            }
-        }catch (Exception a){
-            a.printStackTrace();
-            a.getCause();
+        boolean result = connectNow.validateLogin(benutzername.getText(),passwort.getText());
 
+        if(result == true) {
+            Main m = new Main();
+            m.changeScene("homepage.fxml");
+        }else {
+            loginMessageLabel.setText("Falsch Passwort. Versuchen Sie wieder.!!!");
         }
+
     }
 
 

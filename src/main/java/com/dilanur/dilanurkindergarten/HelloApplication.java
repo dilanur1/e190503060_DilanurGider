@@ -21,8 +21,7 @@ public class HelloApplication extends Application {
         stage.setTitle("Login!");
         stage.setScene(scene);
         stage.show();
-        sql mysql=new sql();
-        mysql.connect();
+
 
     }
     public void changeScene( String fxml)throws IOException{
