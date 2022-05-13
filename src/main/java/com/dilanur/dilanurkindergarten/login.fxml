@@ -11,44 +11,39 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ECE3F0;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="860.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="307.0" style="-fx-background-color: #5E376D;">
+      <Pane layoutY="-5.0" prefHeight="541.0" prefWidth="430.0" style="-fx-background-color: #4A83C2;">
          <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="162.0" prefHeight="34.0" prefWidth="118.0" style="-fx-background-color: #ECE3F0; -fx-background-radius: 16px;" text="Benutzername" textFill="#030000">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="220.0" prefHeight="32.0" prefWidth="118.0" style="-fx-background-color: #ECE3F0; -fx-background-radius: 17px;" text="Passwort" textFill="#0d0000" underline="true">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Label>
-            <PasswordField fx:id="passwort" layoutX="147.0" layoutY="224.0" promptText="Passwort" />
-            <TextField fx:id="benutzername" layoutX="147.0" layoutY="167.0" promptText="Benutzername" />
-            <Button fx:id="anmelden" layoutX="88.0" layoutY="296.0" mnemonicParsing="false" onAction="#login" prefHeight="41.0" prefWidth="118.0" style="-fx-background-radius: 15px; -fx-background-color: #ECE3F0;" text="ANMELDEN" textFill="#0a0000" />
-            <Text fill="WHITE" layoutX="66.0" layoutY="99.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ANMELDUNG">
-               <font>
-                  <Font name="System Bold" size="25.0" />
-               </font>
-            </Text>
             <Label fx:id="label" alignment="CENTER" layoutX="31.0" layoutY="263.0" prefHeight="25.0" prefWidth="246.0" textFill="#f2f2f2">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
+            <Text fill="WHITE" layoutX="95.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HÄNDLER SYSTEM">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="252.0" fitWidth="275.0" layoutX="87.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../images/2022-05-13%20(11).png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
-      <Text fill="#0d0000" layoutX="340.0" layoutY="284.0" strokeType="OUTSIDE" strokeWidth="0.0" text="HÄNDLER SYSTEM">
+      <TextField fx:id="benutzername" layoutX="508.0" layoutY="225.0" prefHeight="27.0" prefWidth="275.0" promptText="Benutzername" style="-fx-border-color: #4A83C2;" />
+      <PasswordField fx:id="passwort" layoutX="508.0" layoutY="284.0" prefHeight="27.0" prefWidth="275.0" promptText="Passwort" style="-fx-border-color: #4A83C2;" />
+      <Button fx:id="anmelden" layoutX="684.0" layoutY="346.0" mnemonicParsing="false" onAction="#login" prefHeight="47.0" prefWidth="99.0" style="-fx-background-radius: 15px; -fx-background-color: #4A83C2;" text="ANMELDEN" textFill="WHITE" />
+      <Text fill="WHITE" layoutX="594.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="375.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../images/8095403-removebg-preview.png" />
-         </image>
-      </ImageView>
+      <Text fill="#4c95c6" layoutX="565.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ANMELDUNG">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

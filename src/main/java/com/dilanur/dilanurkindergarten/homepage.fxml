@@ -1,49 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #5E376D;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #4A83C2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Pane layoutX="37.0" layoutY="52.0" prefHeight="132.0" prefWidth="128.0" style="-fx-background-color: white; -fx-background-radius: 15px;">
-         <children>
-            <ImageView fitHeight="122.0" fitWidth="127.0" layoutX="3.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../images/8095403-removebg-preview.png" />
-               </image>
-            </ImageView>
-         </children>
-      </Pane>
-      <TextField alignment="CENTER" layoutX="40.0" layoutY="200.0" prefHeight="30.0" prefWidth="121.0" promptText="PRODUKT" text="PRODUKT">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField alignment="CENTER" layoutX="40.0" layoutY="246.0" prefHeight="30.0" prefWidth="121.0" text="KUNDE">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField alignment="CENTER" layoutX="40.0" layoutY="290.0" prefHeight="30.0" prefWidth="121.0" text="PERSONAL">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <TextField alignment="CENTER" layoutX="40.0" layoutY="335.0" prefHeight="30.0" prefWidth="121.0" text="EINSTELLUNGEN">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </TextField>
-      <Text fill="#fffbfb" layoutX="233.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STARTSEITE">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Text>
+      <ChoiceBox fx:id="wählen" layoutX="15.0" layoutY="200.0" prefWidth="150.0" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../images/2022-05-13%20(11).png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
